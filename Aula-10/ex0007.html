@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font:normal Arial 18pt;
+        }
+        input{
+            font: normal Arial 18pt;
+            width: 100px;
+            height: 20px;
+        }
+        input.cOperators{
+            width: 50px;
+        }
+        div#idRes{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Dois Valores</h1>
+    <input type="number" name="nN1" id="idN1">
+    <input type="button" value="+" class="cOperators"/>
+    <input type="number" name="nN2" id="idN2">
+    <input type="button" value="=" class="cOperators" onclick="somar()">
+    <p id="idRes">Resposta: </p>
+    <script>
+        function somar(){
+            var n1 = window.document.getElementById('idN1');
+            var n2 = window.document.querySelector('input#idN2');
+            var idRes = window.document.querySelector('p#idRes');
+            var n1Float = parseFloat(n1.value);
+            var n2Float = parseFloat(n2.value);
+            var s = n1Float + n2Float;
+            idRes.innerHTML = `A soma entre ${n1Float} e ${n2Float} é ${s}.`;
+        }
+    </script>
+</body>
+</html>

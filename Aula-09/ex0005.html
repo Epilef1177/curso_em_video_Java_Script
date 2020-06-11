@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex0005</title>
+    <style>
+        body{
+            /*background-color: rgba(68, 125, 199, 1);*/
+            font: normal 18pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="idBackDiv">
+        <h1 class="shadow">Iniciando os estudos DOM</h1>
+        <p class="haha">risos</p>
+        <p name="nShadow" class="shadow">Aqui vai o resultado</p>
+    </div>
+    <div id="idSecondDiv">
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+        <p class="haha">risos</p>
+        <div id="msg">Clique em mim</div>
+        <p id="msgv" class="shadow">teste</p>  
+        <p class="haha">risos</p>
+    </div>  <br/>
+        <script>
+            var p1 = window.document.getElementsByTagName('p')[1];
+            window.document.write('Está escrito assim: '+p1.innerText);
+            p1.style.color = 'blue';
+
+            var corpo = window.document.body;
+            corpo.style.background = 'black';
+            
+            var varBackDiv = window.document.getElementById('idBackDiv');
+            varBackDiv.style.background = 'rgba(68, 125, 199, 1)';
+    
+            var msgr = window.document.getElementById('msg');
+            msgr.innerText = 'Estou aguardando...';
+            msgr.style.background = 'green';
+            msgr.style.color = 'yellow';
+    
+            window.document.getElementById('idSecondDiv').style.background = 'rgba(234,24,67,1)';
+            window.document.getElementById('idSecondDiv').style.height ='300px'
+
+           var shadow = window.document.getElementsByClassName('shadow')[1];
+            shadow.style.background = 'rgba(12,34,56,1)';
+
+            window.document.getElementsByName('nShadow')[0].style.background = 'rgba(30,37,100,1)';
+
+            window.document.querySelector('h1.shadow').style.padding = '50px';
+
+            var smile = window.document.querySelectorAll('p.haha')[0];
+            smile.style.color = 'green';
+        </script>    
+</body>
+</html>
