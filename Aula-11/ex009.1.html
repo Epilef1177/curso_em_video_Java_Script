@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    <p>
+        Qual o seu país de origem? <input type="text" placeholder="País" name="nCountry" id="idCountry" list="lCountry"/>
+        <datalist id="lCountry">
+            <option value="Brasil"></option>
+        </datalist>
+        <input type="button" value="=" name="nRes" id="idRes" onclick="resultNation()"/>
+    </p>
+    <p id="idRes">
+
+    </p>
+    <script>
+        function resultNation(){
+            var vCountry = window.document.querySelector('input#idCountry')
+            var vRes = window.document.querySelector('p#idRes')
+            if(vCountry =="Brasil"){
+                vRes.innerHTML = `Você é brasileiro!`
+            }else{
+                vRes.innerHTML = `Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
