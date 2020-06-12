@@ -8,24 +8,48 @@
 <body>
     <h1>Nacionalidades</h1>
     <p>
-        Qual o seu país de origem? <input type="text" placeholder="País" name="nCountry" id="idCountry" list="lCountry"/>
+        Apesar de tanto o sinal de igual 1, quanto o sinal de igual 2, mostrarem os mesmos resultados, o meio pra se fazer isso no 1 é mais compacto e elegante que o segundo, pois são declaradas apenas duas 'var'(s) enquanto que na segunda são três, ocorrendo redundâncias. Vide: código.
+    </p>
+    <p>
+        Qual o seu país de origem? <input type="text" placeholder="País" name="nCountry" id="idCountry" list="lCountry">
         <datalist id="lCountry">
             <option value="Brasil"></option>
         </datalist>
-        <input type="button" value="=" name="nRes" id="idRes" onclick="resultNation()"/>
+        <input type="button" value="1=" name="nResIgual1" id="idResIgual1" onclick="resultNation1()"/>
+        <input type="button" value="2=" name="nResIgual2" id="idResIgual2" onclick="resultNation2()"/>
     </p>
     <p id="idRes">
 
     </p>
     <script>
-        function resultNation(){
+        /*
+        Nessa primeira 'function' encontrei uma forma mais campacta de se trabalhar, usando apenas duas variáveis e manipulando a primeira onde se deseja mostrar ou comparar valores.
+        */
+        function resultNation1(){
             var vCountry = window.document.querySelector('input#idCountry')
             var vRes = window.document.querySelector('p#idRes')
-            if(vCountry =="Brasil"){
-                vRes.innerHTML = `Você é brasileiro!`
+            if(vCountry.value =="Brasil"){
+                vRes.innerHTML += `Você é brasileiro!`
             }else{
-                vRes.innerHTML = `Você é estrangeiro`
+                vRes.innerHTML += `Você é estrangeiro`
             }
+            vRes.innerHTML += `<p>${vCountry.value}.</p>`
+        }
+
+        /*
+        Já nesta segunda 'function', utilizei três variáveis, criando informações redundantes dentro do código, o que não é legal!
+        */
+        function resultNation2(){
+            
+            var vCountry = window.document.querySelector('input#idCountry')
+            var vRes = window.document.querySelector('p#idRes')
+            var pais = (vCountry.value)
+            if(pais =="Brasil"){
+                vRes.innerHTML += `Você é brasileiro!`
+            }else{
+                vRes.innerHTML += `Você é estrangeiro`
+            }
+            vRes.innerHTML += `<p>${pais}.</p>`
         }
     </script>
 </body>

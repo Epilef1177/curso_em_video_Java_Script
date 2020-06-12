@@ -24,6 +24,8 @@
             vRes.innerHTML = `<p>Sua velocidade atual é de <strong>        ${vVelNumber}km/h</strong></p>`;
             if(vVelNumber > 60){
                     vRes.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>';
+            }else{
+                vRes.innerHTML += '<p>Continue andando na velocidade permitida.</p>'
             }
             vRes.innerHTML += '<p>Dirija sempre com o cinto de segurança!</p>';
         }
