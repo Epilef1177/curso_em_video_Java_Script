@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="Ex2-style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Ano de Nascimento:
+                <input type="number" name="nNasc" id="idNasc" min="1900"/>
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="nSexo" id="idMasc" checked/>
+                <label for="idMasc">Masculino</label>
+                <input type="radio" name="nSexo" id="idFemi" />
+                <label for="idFemi">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()"/>
+            </p>
+        </div>
+        <div id="idRes">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Curso em Vídeo</p>
+    </footer>
+    <script src="Ex2-script.js"></script>
+</body>
+</html>
