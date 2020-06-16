@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Aula-13/ambiente.js"
+            "program": "${workspaceFolder}/Teste.js"
             "runtimeExecutable": "/home/epilef/.nvm/versions/node/v12.18.0/bin/node
             "
         }
